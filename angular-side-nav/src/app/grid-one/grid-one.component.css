@@ -1,0 +1,78 @@
+.grid-container{
+    margin: 10px;
+    display: grid;
+    justify-content: center;
+    width: 100%;
+    height: 90%;
+}
+.wrapper {
+    display: grid;
+    width: 100%;
+    height: 90%;
+    gap: 10px;
+    grid-gap: 10px;
+    grid-template-columns: 1fr 1fr 1fr;
+    background-color: #bebebe;
+}
+
+.box {
+    background-color: whitesmoke;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+h1, h2, h3{
+    text-align: center;
+    color: #005CB9;
+}
+
+.patient-feilds{
+    margin: auto;
+    width: auto;
+    display: grid;
+    gap: 10px;
+    grid-gap: 10px;
+    grid-template: 1fr / repeat(4, 1fr);
+
+}
+
+.patient-feilds input{
+    width: 95%;
+    border: 1px solid rgba(0, 92, 184, 0.692);
+    border-radius: 2px;
+}
+
+.patient-feilds label{
+    color: #005CB9;
+    font-weight: 550;
+}
+
+.library-feilds{
+    width: 90%;
+    gap: 10px;
+    grid-gap: 10px;
+    display: flex;
+    flex-direction: column;
+    color: #005CB9;
+    font-weight: 550;
+}
+
+.a {
+    grid-column: 1 / 3;
+    grid-row: 1;
+}
+
+.b {
+    grid-column: 3;
+    grid-row: 1 / 3;
+}
+
+.c {
+    grid-column: 1;
+    grid-row: 2;
+}
+
+.d {
+    grid-column: 2;
+    grid-row: 2;
+}

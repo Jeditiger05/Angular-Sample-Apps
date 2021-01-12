@@ -1,0 +1,12 @@
+.my-modal {
+  background-color: #afafaf;
+  width: fit-content;
+}
+
+.close-btn {
+  z-index: 50;
+  position: absolute;
+  top: 1em;
+  right: 1em;
+  margin: 10px;
+}

@@ -1,0 +1,26 @@
+.grid-container{
+    max-width: 80%;
+    height: 80%;
+    margin: auto;
+    display: grid;
+    align-items: center;
+    gap: 55px;
+    grid-template: 1fr / repeat(2, 1fr);
+}
+
+.box{
+    width: 320px;
+    height: 320px;
+    background: #808080a2;
+    border: 1px solid #3f3f3f;
+    border-radius: 5px;
+    box-shadow: 5px 5px 5px rgb(56, 56, 56);
+}
+
+#a{
+    justify-self: right;
+}
+
+#b{
+    justify-self: left;
+}

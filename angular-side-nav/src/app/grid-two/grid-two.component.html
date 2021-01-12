@@ -1,0 +1,40 @@
+<div class="container">
+
+    <form class="form-grid" #patientForm="ngForm" (ngSubmit)="submitPatient(patientForm.form);">
+
+        <label>First Name</label>
+        <input type="text" class="form-control" name="first-name" ngModel #nameField="ngModel" required minlength="3">
+        <div *ngIf="nameField.touched && nameField.errors">
+            <div class="error" *ngIf="nameField.errors.required">
+                Patients first name is required
+            </div>
+            <div class="error" *ngIf="nameField.errors.minlength">
+                The name should be at least {{ nameField.errors.minlength.requiredLength }} characters long
+            </div>
+        </div>
+
+        <label>E-Mail</label>
+        <input type="email" class="form-control" name="email" ngModel #emailField="ngModel" required email>
+        <div *ngIf="emailField.touched && emailField.errors">
+            <div class="error" *ngIf="emailField.errors.required">
+                E-Mail is required
+            </div>
+            <div class="error" *ngIf="emailField.errors.email">
+                Check that you have entered a valid email address
+            </div>
+        </div>
+
+        <label>Title</label>
+        <select class="form-control" name="title" ngModel #titleField="ngModel" required>
+            <option *ngFor="let title of titles" [value]="title">
+                {{ title }}
+            </option>
+        </select>
+
+        <div class="error" *ngIf="titleField.touched && !titleField.valid">
+            Patients title is required
+        </div>
+        <button class="toggle-btn" [disabled]="!patientForm.valid">Submit</button>
+    </form>
+
+</div>

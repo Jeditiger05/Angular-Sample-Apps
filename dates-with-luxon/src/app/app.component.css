@@ -1,0 +1,7 @@
+.control{
+    max-width: 300px;
+}
+
+.current-date{
+    display: flex
+}

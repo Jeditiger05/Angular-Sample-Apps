@@ -1,0 +1,26 @@
+<mat-drawer-container class="grid-container" autosize>
+  <mat-drawer #drawer class="sidenav" mode="side" opened>
+
+    <div id="back-btn" class="back" (click)="back()">
+      < Back</div>
+
+        <div class="nav-link" routerLink=""><i class="material-icons">home</i> HOME</div>
+        <div class="nav-link" routerLink="grid-one"><i class="material-icons">person</i> Grid-One</div>
+        <div class="nav-link" routerLink="grid-three"><i class="material-icons">book</i> Grid-Three</div>
+        <div class="nav-link" routerLink="grid-two"><i class="material-icons">web</i> Grid-Two</div>
+
+  </mat-drawer>
+  <button class="toggle-btn" type="button" mat-button (click)="drawer.toggle()">
+    Toggle Nav
+  </button>
+  <h1>Administration System <i class="material-icons"></i></h1>
+
+  <ngx-spinner></ngx-spinner>
+  <router-outlet></router-outlet>
+
+  <button type="button" class="toggle-btn" placement="left"
+        ngbPopover="Pop goes the weasle">
+  Popover on bottom
+</button>
+
+</mat-drawer-container>

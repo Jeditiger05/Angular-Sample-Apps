@@ -1,0 +1,45 @@
+.hover-anim:hover{
+    transform: scale(1.02);
+    box-shadow: 5px 10px rgb(70, 69, 69);
+    cursor: pointer;
+}
+
+.hover-anim{
+    transition: .4s;
+    color: hsl(0, 0%, 21%);
+}
+
+.tile-1{
+    background: linear-gradient(180deg, hsl(180, 80%, 90%), hsl(171, 100%, 41%));
+    border: 5px hsl(171, 100%, 35%);
+    border-radius: 10px;
+    border-style: inset double;
+}
+
+.tile-2{
+    background: linear-gradient(180deg, hsl(60, 80%, 90%), hsl(48, 100%, 67%));
+    border: 5px hsl(48, 100%, 55%);
+    border-radius: 10px;
+    border-style: inset double;
+}
+
+.tile-3{
+    background: linear-gradient(180deg, hsl(204, 95%, 85%), hsl(204, 86%, 53%));
+    border: 5px hsl(204, 86%, 45%);
+    border-radius: 10px;
+    border-style: inset double;
+}
+
+.tile-4{
+    background: linear-gradient(180deg, rgb(250, 210, 210), rgb(150, 0, 0));
+    border: 5px rgb(185, 0, 0);
+    border-radius: 10px;
+    border-style: inset double;
+}
+
+.tile-5{
+    background: linear-gradient(180deg, hsl(141, 100%, 89%), hsl(141, 71%, 48%));
+    border: 5px hsl(141, 71%, 35%);
+    border-radius: 10px;
+    border-style: inset double;
+}

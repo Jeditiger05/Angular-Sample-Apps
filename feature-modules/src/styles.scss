@@ -1,0 +1,50 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~bulma/bulma";
+
+.my-t {
+  min-height: 150px;
+  background: $white-ter;
+  opacity: 0.8;
+  border: 5px $grey-lighter;
+  border-style: inset;
+  border-radius: 5px;
+}
+
+.t-1 {
+  background-color: $purple;
+}
+
+.t-2 {
+  background-color: $orange;
+}
+
+.t-3 {
+  background-color: $green;
+}
+
+.t-4 {
+  background-color: $yellow;
+}
+
+.t-5 {
+  background-color: $blue;
+}
+
+.t-6 {
+  background-color: $red;
+}
+
+.t-7 {
+  background-color: $turquoise;
+}
+
+.t-anim:hover {
+  transform: scale(1.02);
+  box-shadow: 5px 10px $grey;
+  cursor: pointer;
+}
+
+.t-anim {
+  transition: 0.4s;
+  color: $grey;
+}

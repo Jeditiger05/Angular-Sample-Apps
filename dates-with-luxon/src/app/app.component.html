@@ -1,0 +1,60 @@
+<div class="container">
+  <h1 class="title">Reactive Forms and Date Validation using Luxon</h1>
+
+<div class="current-date">
+  <h1 class="subtitle">Current Date: {{ currentDate }}</h1>
+  <h1 class="subtitle"></h1>
+</div>
+
+  <form [formGroup]="form" (ngSubmit)="submitForm()">
+
+    <div class="field">
+      <label class="label">Date to Compare (must be after todays date to be valid)</label>
+      <div class="control">
+        <input class="input is-primary" type="text" mask="00/00/0000" placeholder="_ _ /_ _ /_ _ _ _" [formControlName]="'checkMaskDate'" />
+      </div> 
+    </div>
+
+    <div class="has-text-danger" *ngIf="form.controls.checkMaskDate.invalid && form.controls.checkMaskDate.touched">
+      <div *ngIf="form.controls.checkMaskDate.errors?.dateIsValid">Invalid Date</div>
+      <div *ngIf="form.controls.checkMaskDate.errors?.required">Date Required</div>
+      <div *ngIf="form.controls.checkMaskDate.errors?.dateToCheck">Must be after todays date</div>
+    </div>
+
+    <div class="field">
+      <label class="label">Date to Compare (must be after todays date to be valid)</label>
+      <div class="control">
+        <input class="input is-primary" type="date" [formControlName]="'checkDate'" />
+      </div>
+    </div>
+
+    <div class="has-text-danger" *ngIf="form.controls.checkDate.invalid && form.controls.checkDate.touched">
+      <div *ngIf="form.controls.checkDate.errors?.dateIsValid">Date is Invalid</div>
+      <div *ngIf="form.controls.checkDate.errors?.required">Date Required</div>
+      <div *ngIf="form.controls.checkDate.errors?.dateToCheck">Must be after todays date</div>
+    </div>
+
+    <div class="columns">
+      <div class="column">
+        <button type="submit" class="button is-primary">Compare Date</button>
+      </div>
+      <div class="column">
+        <button type="button" class="button is-info" (click)="logDate()">
+          Log Date
+        </button>
+        <button type="button" class="button is-warning" routerLink="tiled-dash">
+          Dashboard
+        </button>
+      </div>
+    </div>
+      
+  </form>
+</div>
+
+<div class="control">
+
+</div>
+
+<div class="container mt-6 p-2">
+  <router-outlet></router-outlet>
+</div>
