@@ -1,0 +1,9 @@
+.radio-buttons-as-buttons {
+    label {
+      @extend button
+    }
+  
+    input {
+      display: none;
+    }
+  }

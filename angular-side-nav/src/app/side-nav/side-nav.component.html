@@ -1,0 +1,30 @@
+<mat-sidenav-container class="side-nav-container" autosize>
+
+
+  <mat-sidenav #sidenav class="sidenav" mode="over" opened (click)="sidenav.close()">
+
+    <div id="back-btn" class="back" (click)="back()">
+      <i class="fas fa-chevron-left"></i> Back</div>
+
+        <div class="nav-link" routerLink=""><i class="material-icons">home</i> HOME</div>
+        <div class="nav-link" routerLink="grid-one"><i class="material-icons">person</i> Grid-One</div>
+        <div class="nav-link" routerLink="grid-three"><i class="material-icons">book</i> Grid-Three</div>
+        <div class="nav-link" routerLink="grid-two"><i class="material-icons">web</i> Grid-Two</div>
+        <div class="nav-link" (click)=startSpinner()><i class="fas fa-spinner"></i> Loader</div>
+
+  </mat-sidenav>
+
+  <app-banner></app-banner>
+
+  <button class="toggle-btn" type="button" mat-button (click)="sidenav.toggle()">
+    <i class="fas fa-bars"></i>
+  </button>
+
+  <ngx-spinner></ngx-spinner>
+  <router-outlet></router-outlet>
+
+  <button type="button" class="pop-over" placement="left" ngbPopover="Pop goes the weasle">
+    Popover on bottom
+  </button>
+
+</mat-sidenav-container>

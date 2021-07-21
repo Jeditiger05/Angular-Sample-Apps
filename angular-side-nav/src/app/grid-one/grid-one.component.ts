@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { DataService } from '../data.service';
 
 @Component({
   selector: 'app-grid-one',
@@ -8,18 +7,8 @@ import { DataService } from '../data.service';
 })
 export class GridOneComponent implements OnInit {
 
-  constructor(private dataService: DataService) { }
+  constructor() { }
 
   ngOnInit(): void {
   }
-
-  startSpinner() {
-    this.dataService.loading.next(true);
-
-    setTimeout(() => {
-      /** spinner ends after 5 seconds */
-      this.dataService.loading.next(false);
-    }, 5000);
-  }
-
 }

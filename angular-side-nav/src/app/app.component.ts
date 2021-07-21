@@ -1,7 +1,6 @@
-import { Component } from '@angular/core';
-import { Location } from '@angular/common'
 import { DataService } from './data.service';
 import { NgxSpinnerService } from 'ngx-spinner';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -12,7 +11,7 @@ export class AppComponent {
   title = 'angular-side-nav';
 
 
-  constructor (private _location: Location, private dataService: DataService,
+  constructor ( private dataService: DataService,
     private spinner: NgxSpinnerService){
     this.dataService.loading.subscribe((value) => {
       if (value) {
@@ -30,8 +29,8 @@ export class AppComponent {
     });
   }
 
-  back(){
-    this._location.back();
+  log(){
+    console.log('Yep');
+    
   }
-
 }

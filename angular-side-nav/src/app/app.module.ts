@@ -14,6 +14,8 @@ import { GridTwoComponent } from './grid-two/grid-two.component';
 import { FieldsComponent } from './fields/fields.component';
 import { GridThreeComponent } from './grid-three/grid-three.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { SideNavComponent } from './side-nav/side-nav.component';
+import { BannerComponent } from './banner/banner.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,9 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     GridOneComponent,
     GridTwoComponent,
     FieldsComponent,
-    GridThreeComponent
+    GridThreeComponent,
+    SideNavComponent,
+    BannerComponent
   ],
   imports: [
     BrowserModule,
